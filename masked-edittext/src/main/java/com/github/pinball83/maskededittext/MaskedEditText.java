@@ -194,7 +194,7 @@ public class MaskedEditText extends AppCompatEditText implements View.OnTouchLis
         if (mask != null && !mask.isEmpty()) {
             Editable unMaskedText = new SpannableStringBuilder();
             for (Integer index : listValidCursorPositions) {
-                if (text != null) {
+                if (text != null && !text.toString().isEmpty()) {
                     unMaskedText.append(text.charAt(index));
                 }
             }
